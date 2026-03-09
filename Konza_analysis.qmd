@@ -20,6 +20,7 @@ library("readr")
 library("dplyr")
 library("ggplot2")
 
-# r
+# read in the data
+konza_data <- read_csv("data/NEON.D06.KONZ.DP1.10058.001.div_1m2Data.2025-08.basic.20251222T234053Z (1).csv")
 ```
 
