@@ -142,3 +142,8 @@ konza_data %>%
 ```
 
 This graph shows that the grassland herbaceous land cover class was present at elevations above around 372 feet, whereas the deciduous forest class was only present at around 351 foot elevation.
+
+## Third Graph 
+
+For the last graph I wanted to show the mean percent cover of each family. I think this would be useful to see how prevalent each family is in the area. This could be a good way to know which family needs to be mitigated and which family needs to be more present.
+
