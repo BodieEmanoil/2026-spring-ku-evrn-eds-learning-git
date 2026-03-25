@@ -112,6 +112,12 @@ konza_data %>%
   filter(!is.na(family)) %>%
   filter(family == "Poaceae") %>%
   ggplot() + 
+  geom_point(aes(x = decimalLatitude,
+               y = percentCover,
+               group = decimalLatitude)) +
+  labs(title = "Cover of Poaceae by Latitude",
+       x = "Latitude",
+       y = "Percent Cover")
   
 ```
 
