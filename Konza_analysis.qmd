@@ -120,4 +120,4 @@ konza_data %>%
        y = "Percent Cover")
   
 ```
-
+It appears that this graph shows that there isn't much difference in Poaceae at each of the latitudes measured. This is likely because the latitudes are all very similar. Nevertheless, I think it was important to check that latitude didn't have an effect on the perecent cover.
