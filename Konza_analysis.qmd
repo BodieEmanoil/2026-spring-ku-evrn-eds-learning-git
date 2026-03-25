@@ -147,3 +147,20 @@ This graph shows that the grassland herbaceous land cover class was present at e
 
 For the last graph I wanted to show the mean percent cover of each family. I think this would be useful to see how prevalent each family is in the area. This could be a good way to know which family needs to be mitigated and which family needs to be more present.
 
+```{r}
+#| label: mean-percent-cover-by-family
+
+konza_data %>%
+  filter(!is.na(family)) %>%
+  group_by(family) %>%
+  summarise(mean_percent_cover = mean(percentCover)) %>%
+  ggplot() +
+  geom_point(aes(x = family,
+                y = mean_percent_cover,
+                color = family)) +
+  labs(x = "Family",
+       y = "Mean Percent Cover",
+       title = "Mean Percent Cover by Family")
+```
+
+This graph shows what family have the highest average percent covers, with Lamiaceae being the highest by far.
