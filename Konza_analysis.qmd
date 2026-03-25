@@ -103,6 +103,8 @@ Need to demonstrate the use of the `mutate()` function, and then how to use `ggp
 
 # Practicing Exploratory Data Analysis Assignment 
 
+## First Graph
+
 The first graph I am making is to show the percent cover of poaceae based on the latitude it is at. I chose these data sets because I thought it would be interesting to see if this family shows up differently in different latitudes. For example there could be less showing up at higher/lower latitudes and that would be something to look further into.
 
 ```{r}
@@ -120,4 +122,23 @@ konza_data %>%
        y = "Percent Cover")
   
 ```
-It appears that this graph shows that there isn't much difference in Poaceae at each of the latitudes measured. This is likely because the latitudes are all very similar. Nevertheless, I think it was important to check that latitude didn't have an effect on the perecent cover.
+It appears that this graph shows that there isn't much difference in Poaceae at each of the latitudes measured. This is likely because the latitudes are all very similar. Nevertheless, I think it was important to check that latitude didn't have an effect on the percent cover.
+
+## Second Graph
+
+The second graph I am making is one to show the effects that elevation has on the land cover class. I thought this could be interesting to see if elevation had an effect on the land type. This could be useful in knowing how elevation effects how plants can grow in this area.
+
+```{r}
+#| label: land-cover-class-by-elevation
+
+konza_data %>%
+  ggplot() + 
+  geom_boxplot(aes(x = nlcdClass,
+                   y = elevation,
+                   color = nlcdClass)) +
+  labs(x = "Land Cover Class",
+       y = "Elevation",
+       title = "Land Cover Class by Elevation")
+```
+
+This graph shows that the grassland herbaceous land cover class was present at elevations above around 372 feet, whereas the deciduous forest class was only present at around 351 foot elevation.
